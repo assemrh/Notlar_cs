@@ -8,3 +8,6 @@ headElement.AppendChild(scriptElement);
 
 // Call the nextline whenever you want to execute your code
 webBrowser1.Document.InvokeScript("applyChanges");
+
+
+https://docs.microsoft.com/pt-br/dotnet/api/system.windows.forms.webbrowser?redirectedfrom=MSDN&view=net-5.0
