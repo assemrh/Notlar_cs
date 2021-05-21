@@ -1,0 +1,10 @@
+#How to update DOM content inside WebBrowser Control in C#?
+
+HtmlElement headElement = webBrowser1.Document.GetElementsByTagName("head")[0];
+HtmlElement scriptElement = webBrowser1.Document.CreateElement("script");
+IHTMLScriptElement domScriptElement = (IHTMLScriptElement)scriptElement.DomElement;
+domScriptElement.text = "function applyChanges(){/*DO WHATEVER YOU WANT HERE*/}";
+headElement.AppendChild(scriptElement);
+
+// Call the nextline whenever you want to execute your code
+webBrowser1.Document.InvokeScript("applyChanges");
